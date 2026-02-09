@@ -1,25 +1,44 @@
 <div align="center">
   <img width="455" alt="Magic Resume Logo" src="./public/magic-resume-logo.png">
   
-  <p><strong>AI 驱动的现代化简历构建器</strong></p>
+  <p><strong>基于 AI 的全流程智能求职助手</strong></p>
+  <p>🚀 毕业设计项目展示</p>
   
-  [![License](https://img.shields.io/github/license/LinMoQC/Magic-Resume?style=flat-square)](https://github.com/LinMoQC/Magic-Resume/blob/master/LICENSE) [![Stars](https://img.shields.io/github/stars/LinMoQC/Magic-Resume?style=flat-square)](https://github.com/LinMoQC/Magic-Resume/stargazers) [![Forks](https://img.shields.io/github/forks/LinMoQC/Magic-Resume?style=flat-square)](https://github.com/LinMoQC/Magic-Resume/network/members) [![Issues](https://img.shields.io/github/issues/LinMoQC/Magic-Resume?style=flat-square)](https://github.com/LinMoQC/Magic-Resume/issues)
+  [![License](https://img.shields.io/github/license/LinMoQC/Magic-Resume?style=flat-square)](https://github.com/LinMoQC/Magic-Resume/blob/master/LICENSE) [![Stars](https://img.shields.io/github/stars/LinMoQC/Magic-Resume?style=flat-square)](https://github.com/LinMoQC/Magic-Resume/stargazers)
 </div>
 
 ---
 
 ## 🌟 项目简介
 
-**Magic Resume** 是一款现代化的 AI 驱动简历构建器，采用 Next.js 14 构建。它不仅提供直观的在线编辑体验，还能根据目标职位智能优化简历内容，让您的求职之路更加顺畅。
+**Magic Resume** 是一款融合了前沿 AI 技术的全流程智能求职辅助系统。不同于传统的简历编辑器，本项目利用大语言模型（LLM）和检索增强生成（RAG）技术，为求职者提供从**简历撰写**、**内容优化**、**职业规划**到**面试准备**的一站式解决方案。
 
-### ✨ 核心特性
+本项目基于 **Next.js 14** 全栈开发，集成了 OpenAI/LangChain 等 AI 能力，旨在解决求职过程中“简历针对性差”、“职业规划迷茫”、“面试准备不足”等核心痛点。
 
-- 🎨 **可视化模板自定义** - 22种精美字体 + 实时颜色/布局调整
-- 🤖 **AI 智能优化** - 根据 JD 自动优化简历内容和匹配度
-- 📊 **专业分析报告** - Lighthouse 风格的简历健康度分析
-- 🌐 **完整国际化** - 中英文界面无缝切换
-- 💾 **本地存储优先** - 数据安全，支持多格式导出
-- 🎯 **实时预览** - 所见即所得的编辑体验
+---
+
+## ✨ 核心功能 (AI Lab)
+
+除了基础的简历编辑功能外，本项目独创了 **AI Lab (AI 实验室)**，包含四大核心模块：
+
+### 1. 🤖 简历智能优化 (Smart Optimization)
+- **深度分析**: 根据目标职位描述 (JD)，自动分析简历与岗位的匹配度。
+- **针对性重写**: AI 自动优化简历中的经历描述，使其更符合 JD 要求，突出核心竞争力。
+- **Lighthouse 式评分**: 提供多维度的简历健康度分析报告（影响力、清晰度、量化成果等）。
+
+### 2. 🗺️ 职业路径规划 (Career Path Planner)
+- **技能差距分析**: 通过雷达图直观展示当前能力与目标职位的差距。
+- **智能推断**: 支持自动推断适合的职业发展方向。
+- **学习路径推荐**: 生成定制化的学习计划，帮助用户弥补技能短板。
+
+### 3. 💬 AI 模拟面试官 (Mock Interview)
+- **沉浸式体验**: AI 化身严厉面试官，基于简历和 JD 进行多轮技术/行为面试。
+- **语音交互**: 支持语音输入与 AI 语音回复 (TTS/STT)，还原真实面试场景。
+- **实时反馈**: 对用户的回答进行点评，并提供改进建议。
+
+### 4. ✉️ 智能求职信 (Cover Letter Generator)
+- **一键生成**: 只需提供 JD，即可生成语气得体、重点突出的求职信。
+- **高度定制**: 自动提取简历亮点并与职位要求进行关联。
 
 ---
 
@@ -29,14 +48,12 @@
 
 | 分类 | 技术栈 |
 |------|-------|
-| **前端框架** | Next.js 14 · React 18 · TypeScript |
-| **UI 设计** | Tailwind CSS · Radix UI · shadcn/ui · Framer Motion |
-| **AI 能力** | OpenAI API · Tavily Search · LangChain |
-| **用户认证** | Clerk · NextAuth (可选) |
-| **第三方集成** | GitHub API · 后端服务支持 |
-| **状态管理** | Zustand · Immer |
-| **富文本** | Tiptap Editor · Dnd Kit |
-| **工具链** | ESLint · Husky · Zod |
+| **前端框架** | Next.js 14 (App Router) · React 18 · TypeScript |
+| **UI 设计** | Tailwind CSS · Radix UI · shadcn/ui · Framer Motion · Recharts (可视化) |
+| **AI 引擎** | LangChain · OpenAI API · Tavily Search (联网搜索) |
+| **数据存储** | Zustand (状态管理) · IndexedDB (本地存储) |
+| **编辑器** | Tiptap (富文本) · Dnd Kit (拖拽交互) |
+| **工具链** | ESLint · Husky · Zod · Speech API |
 
 </div>
 
@@ -46,18 +63,15 @@
 resume/
 ├── src/
 │   ├── app/                    # Next.js App Router
-│   │   ├── dashboard/          # 仪表盘页面
-│   │   ├── components/         # 全局组件
-│   │   └── globals.css         # 全局样式
-│   ├── templates/              # 简历模板系统
-│   │   ├── config/             # 模板配置
-│   │   ├── templateLayout/     # 布局组件
-│   │   ├── TemplateCustomizer/ # 自定义器组件
-│   │   └── renderer/           # 渲染引擎
+│   │   ├── dashboard/          # 仪表盘与编辑器核心
+│   │   │   └── edit/           
+│   │   │       └── _components/
+│   │   │           └── AiLab/  # AI 实验室核心组件 (面试/规划/优化)
 │   ├── lib/                    # 工具库
+│   │   └── aiLab/              # AI Agent 定义 (LangChain)
+│   ├── prompts/                # AI 提示词工程 (Prompt Engineering)
 │   ├── store/                  # 状态管理
-│   ├── locales/                # 国际化
-│   └── prompts/                # AI 提示词
+│   └── locales/                # 国际化配置
 └── public/                     # 静态资源
 ```
 
@@ -67,261 +81,85 @@ resume/
 
 ```bash
 # 1. 克隆项目
-git clone https://github.com/LinMoQC/Magic-Resume.git
-cd Magic-Resume
+git clone https://github.com/your-username/magic-resume.git
+cd magic-resume
 
 # 2. 安装依赖
 npm install
 
 # 3. 配置环境变量
 cp .env.local.example .env.local
-# 编辑 .env.local 填入您的密钥
 ```
 
 ### 🔑 环境变量配置
 
-创建 `.env.local` 文件进行配置：
+在 `.env.local` 中填入以下核心配置：
 
-```bash
-# 必需配置
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_xxx
-CLERK_SECRET_KEY=sk_test_xxx
+```env
+# Clerk 认证 (必需)
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_...
+CLERK_SECRET_KEY=sk_test_...
 
-# 可选配置 - Google Analytics
-NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX
+# AI 能力 (必需)
+OPENAI_API_KEY=sk-...
+# 或者使用本地 Ollama
+# OPENAI_BASE_URL=http://localhost:11434/v1
+
+# 联网搜索 (可选，用于职业调研)
+TAVILY_API_KEY=tvly-...
 ```
-
-**核心配置项：**
-
-| 配置类别 | 必需性 | 说明 |
-|---------|-------|------|
-| **Clerk 认证** | ✅ 必需 | 用户登录注册系统 |
-| **Google Analytics** | ⚙️ 可选 | 网站流量分析 |
-| **后端服务** | ⚙️ 可选 | 完整后端支持 |
 
 ### 🏃‍♂️ 运行项目
 
 ```bash
-# 开发环境
+# 开发环境启动
 npm run dev
 
-# 生产构建
-npm run build && npm run start
-
-# 代码检查
-npm run lint
+# 打开浏览器访问 http://localhost:3000
 ```
 
-打开 [http://localhost:3000](http://localhost:3000) 开始使用！
-
-### 🔧 详细配置指南
-
-<details>
-<summary><strong>📋 Clerk 用户认证配置 (必需)</strong></summary>
-
-1. 访问 [Clerk.com](https://clerk.com/) 注册账号
-2. 创建新应用，选择认证方式
-3. 在 Dashboard → API Keys 获取密钥：
-   ```env
-   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_xxx
-   CLERK_SECRET_KEY=sk_test_xxx
-   ```
-4. 配置重定向URL（可选）
-
-</details>
-
-<details>
-<summary><strong>🤖 AI 功能配置 (可选)</strong></summary>
-
-**OpenAI API** - 简历智能优化
-1. 访问 [OpenAI Platform](https://platform.openai.com/) 
-2. 创建 API 密钥
-3. 配置：`OPENAI_API_KEY=sk-xxx`
-
-**Tavily API** - 智能搜索增强
-1. 访问 [Tavily.com](https://tavily.com/)
-2. 注册并获取 API 密钥
-3. 配置：`TAVILY_API_KEY=tvly-xxx`
-
-</details>
-
-<details>
-<summary><strong>📱 GitHub 集成 (可选)</strong></summary>
-
-用于从 GitHub 导入项目数据：
-1. 访问 [GitHub Settings → Tokens](https://github.com/settings/tokens)
-2. 生成 Personal Access Token
-3. 配置：`GITHUB_TOKEN=ghp-xxx`
-4. 权限选择：`repo`, `user:email`
-
-</details>
-
-<details>
-<summary><strong>🚀 后端服务配置 (可选)</strong></summary>
-
-如需使用完整后端功能：
-1. 启动后端服务（通常在端口 8000）
-2. 配置后端地址：`BACKEND_URL=http://127.0.0.1:8000`
-3. 启用后端：`NEXT_PUBLIC_IF_USE_BACKEND=true`
-4. 详见后端项目的部署文档
-
-</details>
-
-<details>
-<summary><strong>📊 Google Analytics 配置 (可选)</strong></summary>
-
-**网站流量分析** - 了解用户行为和网站性能
-1. 访问 [Google Analytics](https://analytics.google.com/)
-2. 创建账户和媒体资源
-3. 获取测量ID：`NEXT_PUBLIC_GA_ID=G-XXXXXXXXXX`
-
-**隐私保护特性**：
-- 仅在生产环境启用
-- 其他用户部署时不会影响您的数据
-- 支持自定义事件追踪
-
-详细配置请参考：[ANALYTICS_SETUP.md](./ANALYTICS_SETUP.md)
-
-</details>
-
-<details>
-<summary><strong>🔐 认证系统配置</strong></summary>
-
-**Clerk (推荐)** - 现代认证方案
-- 完整的用户管理界面
-- 多种登录方式支持
-
-**NextAuth (可选)** - 传统认证方案  
-- 配置：`NEXTAUTH_URL` 和 `NEXTAUTH_SECRET`
-- 适用于自定义认证需求
-
-</details>
-
-## 💡 功能特性详解
-
-### 🎨 模板自定义系统
-
-<table>
-<tr>
-<td width="50%">
-
-**颜色主题**
-- 5种快速主题切换
-- 6种详细颜色配置
-- 实时预览效果
-
-**字体系统**  
-- 22种精选字体
-- 包含现代、手写、科技感字体
-- 6级字体大小调节
-
-</td>
-<td width="50%">
-
-**布局控制**
-- 容器宽度调整 (600-1000px)
-- 内边距和间距设置
-- 文本行高和字符间距
-- 段落和章节间距
-
-**实时保存**
-- 自动保存配置差异
-- 减少90%存储空间
-- 完整的撤销/重做
-
-</td>
-</tr>
-</table>
-
-### 🤖 AI 智能功能
-
-| 功能 | 技术支持 | 描述 |
-|-----|---------|------|
-| **智能优化** | OpenAI GPT | 根据 JD 自动优化简历内容 |
-| **健康分析** | AI 分析引擎 | Lighthouse 风格的专业分析 |
-| **引导创建** | 对话式 AI | AI 对话式简历生成 |
-| **智能搜索** | Tavily API | 增强的网络搜索能力 |
-| **GitHub 集成** | GitHub API | 自动导入项目经历 |
-
-## 📸 产品预览
+## 📸 功能预览
 
 <div align="center">
 <table>
   <tr>
-    <td align="center" width="50%"><strong>🎨 模板自定义</strong></td>
-    <td align="center" width="50%"><strong>🤖 AI 智能优化</strong></td>
+    <td align="center" width="50%"><strong>🤖 模拟面试</strong></td>
+    <td align="center" width="50%"><strong>🗺️ 职业规划</strong></td>
   </tr>
   <tr>
-    <td><img src="./public/magic-resume-preview.png" alt="模板自定义" style="border-radius: 8px;"></td>
-    <td><img src="./public/magic-resume-optimize.png" alt="AI 智能优化" style="border-radius: 8px;"></td>
+    <td align="center">实时语音交互，沉浸式面试体验</td>
+    <td align="center">技能雷达图与学习路径推荐</td>
   </tr>
   <tr>
-    <td align="center"><strong>💬 AI 对话助手</strong></td>
-    <td align="center"><strong>🎯 文本选择优化</strong></td>
+    <td align="center" width="50%"><strong>✉️ 智能求职信</strong></td>
+    <td align="center" width="50%"><strong>📊 简历分析</strong></td>
   </tr>
   <tr>
-    <td><img src="./public/magic-resume-chat.png" alt="AI 对话助手" style="border-radius: 8px;"></td>
-    <td><img src="./public/magic-resume-select.png" alt="智能模板选择" style="border-radius: 8px;"></td>
-  </tr>
-  <tr>
-    <td align="center"><strong>📊 专业分析</strong></td>
-    <td align="center"><strong>📱 多端适配</strong></td>
-  </tr>
-  <tr>
-    <td><img src="./public/magic-resume-analysis.png" alt="专业分析" style="border-radius: 8px;"></td>
-    <td><img src="./public/magic-resume-import.png" alt="多端适配" style="border-radius: 8px;"></td>
+    <td align="center">一键生成高质量求职信</td>
+    <td align="center">多维度简历健康度评分</td>
   </tr>
 </table>
 </div>
+
+---
+
+## 📄 毕业设计创新点总结
+
+1.  **AI 驱动的全链路闭环**：不仅仅是写简历，更延伸至职业规划和面试准备，形成完整的求职辅助闭环。
+2.  **多模态交互**：引入语音识别与合成技术，实现了从“文本交互”到“语音交互”的跨越。
+3.  **数据可视化应用**：通过雷达图等图表技术，将抽象的“技能差距”具象化，提升了用户体验。
+4.  **Agent 架构实践**：基于 LangChain 构建了多个垂直领域的 AI Agent（面试官 Agent、规划师 Agent、写作 Agent），展示了 LLM 在特定场景下的应用能力。
 
 ---
 
 ## 🤝 参与贡献
 
-我们欢迎所有形式的贡献！无论是新功能、Bug 修复、文档改进还是问题反馈。
-
-### 📋 贡献指南
-
-1. **Fork 项目** 并创建您的功能分支
-2. **提交变更** 并编写清晰的 commit 信息  
-3. **推送到分支** 并创建 Pull Request
-4. **等待审核** 我们会尽快回复
-
-```bash
-git checkout -b feature/amazing-feature
-git commit -m 'feat: 添加某个很棒的功能'
-git push origin feature/amazing-feature
-```
-
-### 💻 贡献者
-
-感谢所有为 Magic Resume 做出贡献的开发者！
-
-<a href="https://github.com/LinMoQC/Magic-Resume/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=LinMoQC/Magic-Resume" alt="contributors" />
-</a>
-
----
-
-## 📈 Star History
-
-<div align="center">
-  <a href="https://star-history.com/#LinMoQC/Magic-Resume&Date">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=LinMoQC/Magic-Resume&type=Date&theme=dark" />
-      <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=LinMoQC/Magic-Resume&type=Date" />
-      <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=LinMoQC/Magic-Resume&type=Date" />
-    </picture>
-  </a>
-</div>
-
----
+欢迎提交 Issue 或 Pull Request 来改进这个项目！
 
 ## 📄 开源协议
 
 本项目基于 [MIT License](LICENSE) 开源协议。
 
 <div align="center">
-  <p>如果这个项目对您有帮助，请考虑给我们一个 ⭐</p>
-  <p>Made with ❤️ by Magic Resume Team</p>
+  <p>Made with ❤️ for Job Seekers</p>
 </div>
