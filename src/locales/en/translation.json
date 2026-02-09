@@ -1,0 +1,723 @@
+{
+  "settings": {
+    "title": "Settings",
+    "llm": {
+      "title": "OpenAI/Ollama Integration",
+      "description1": "You can make use of the OpenAI API to help you generate content, or improve your writing while composing your resume.",
+      "description2": "You have the option to <1>obtain your own OpenAI API key</1>. This key empowers you to leverage the API as you see fit. Alternatively, if you wish to disable the AI features in Reactive Resume altogether, you can simply remove the key from your settings.",
+      "description3": "You can also integrate with Ollama simply by setting the API key to `sk-1234567890abcdef` and the Base URL to your Ollama URL, i.e. `http://localhost:11434/v1`. You can also pick and choose models and set the max tokens as per your preference.",
+      "apiKeyLabel": "OpenAI/Ollama API Key",
+      "baseUrlLabel": "Base URL",
+      "modelLabel": "Model",
+      "maxTokensLabel": "Max Tokens",
+      "modelPlaceholder": "Select a model"
+    },
+    "notifications": {
+      "unsavedChanges": "Unsaved changes",
+      "settingsSaved": "Settings saved!",
+      "changesReset": "Changes have been reset."
+    },
+    "buttons": {
+      "reset": "Reset",
+      "save": "Save"
+    },
+    "goToApp": "Go to App",
+    "starOnGithub": "Star on GitHub"
+  },
+  "landing": {
+    "nav": {
+      "goToApp": "Go to App",
+      "starOnGithub": "Star on GitHub"
+    },
+    "hero": {
+      "title": "The Modern, AI-Powered <1/> Resume Builder",
+      "subtitle": "Craft your perfect resume with the power of AI. Simple, smart, and secure.",
+      "getStarted": "Get Started",
+      "browseTemplates": "Browse Templates",
+      "tag": "✨ Smart Resume Creation"
+    },
+    "morphingTexts": {
+      "simpleAndSmart": "Simple & Smart",
+      "aiPowered": "AI-Powered",
+      "beautifulTemplates": "Beautiful Templates",
+      "freeAndSecure": "Free & Secure",
+      "modernResume": "Modern Resumes",
+      "getStarted": "Get Started Now",
+      "standOut": "Stand Out"
+    },
+    "features": {
+      "main": {
+        "title": "System Core Functionality & Architecture",
+        "subtitle": "Built with modern Web tech stack and LLM capabilities, creating a complete workflow from data collection to content generation and document export"
+      },
+      "background": {
+        "title": "Research Background & Significance",
+        "subtitle": "Addressing current job market pain points, reconstructing the resume creation process with cutting-edge technology",
+        "cards": {
+          "market": {
+            "title": "Intensified Market Competition",
+            "desc": "HRs spend only 6 seconds on average reviewing a resume. Traditional generic resumes struggle to stand out among massive candidates."
+          },
+          "pain": {
+            "title": "Traditional Creation Pain Points",
+            "desc": "Job seekers face issues like tedious formatting, lack of pertinence, and empty content, making it hard to match different job requirements."
+          },
+          "solution": {
+            "title": "AI Empowered Solution",
+            "desc": "Deeply understanding person-job matching logic through LLMs, realizing intelligent customization and instant optimization of resume content."
+          }
+        }
+      },
+      "comparison": {
+        "title": "System Advantage Comparison",
+        "subtitle": "Breaking through the limitations of traditional resume creation",
+        "traditional": {
+          "title": "Traditional Way",
+          "points": [
+            "Relies on generic templates, lacks personalization",
+            "Manual formatting is time-consuming",
+            "Low content matching with Job Description",
+            "Lacks professional writing guidance"
+          ]
+        },
+        "ourSystem": {
+          "title": "Intelligent Builder",
+          "points": [
+            "Targeted content generation based on JD",
+            "One-click auto-formatting & multi-format export",
+            "RAG engine ensures industry terminology accuracy",
+            "AI real-time optimization suggestions & scoring"
+          ]
+        }
+      },
+      "innovations": {
+        "title": "Key Innovations",
+        "subtitle": "Technical breakthroughs and application innovations of this project",
+        "tech": {
+          "title": "Technical Innovation",
+          "desc": "Pioneered a resume-job matching algorithm based on Hybrid Search, solving the precision problem of long-text semantic understanding."
+        },
+        "mode": {
+          "title": "Model Innovation",
+          "desc": "Introduced 'Lighthouse' scoring mechanism into resume quality assessment, establishing a standardized resume health indicator system."
+        },
+        "interact": {
+          "title": "Interaction Innovation",
+          "desc": "Implemented WYSIWYG streaming generation experience, supporting instant AI polishing and rewriting of local resume content."
+        }
+      },
+      "scenarios": {
+        "title": "Typical Scenarios",
+        "subtitle": "Customized solutions for users at different career stages",
+        "fresh": {
+          "title": "Fresh Graduates",
+          "desc": "Lack experience? AI mines highlights from school projects and internships, converting them into workplace language."
+        },
+        "change": {
+          "title": "Career Switchers",
+          "desc": "Mismatched skills? Intelligently analyzes transferable skills from past experience, reconstructing resume narrative logic."
+        },
+        "expert": {
+          "title": "Senior Experts",
+          "desc": "Too much experience? Automatically condenses redundant info, focusing on core achievements and leadership demonstration."
+        }
+      },
+      "algorithm": {
+        "title": "Core Algorithm Strategy",
+        "subtitle": "Dual-engine drive based on RAG and Prompt Engineering",
+        "rag": {
+          "title": "Vector Retrieval Enhancement (RAG)",
+          "desc": "Builds a vector database of professional skills and industry terms, retrieving the best matching expression paradigms via cosine similarity to solve LLM hallucinations."
+        },
+        "prompt": {
+          "title": "Structured Prompt Engineering",
+          "desc": "Designs CoT (Chain of Thought) prompt chains, guiding the model to generate high-quality content in 'Analyze-Identify-Reconstruct-Polish' steps."
+        }
+      },
+      "metrics": {
+        "title": "Experimental Effect Analysis",
+        "subtitle": "System performance evaluation metrics based on test sets",
+        "speed": "Generation Efficiency",
+        "accuracy": "Job Matching Degree",
+        "satisfaction": "Layout Professionalism"
+      },
+      "architecture": {
+        "title": "Technical Architecture & Implementation",
+        "subtitle": "Adopting cutting-edge AI tech stack and modern frontend frameworks to build a high-performance, high-availability intelligent resume system",
+        "llm": {
+          "title": "LLM Engine",
+          "description": "Integrates OpenAI GPT-4 and local open-source models (Ollama), achieving precise content generation and optimization via Prompt Engineering."
+        },
+        "rag": {
+          "title": "RAG Enhancement",
+          "description": "Builds vector databases to realize semantic matching between Job Descriptions (JD) and resume content, significantly improving generation pertinence."
+        },
+        "frontend": {
+          "title": "Modern Frontend Engineering",
+          "description": "Based on Next.js 14 and React Server Components, combined with Tailwind CSS to achieve responsive design and extreme performance."
+        },
+        "security": {
+          "title": "Privacy Security Architecture",
+          "description": "Uses IndexedDB for pure frontend data storage, zero server-side data retention, ensuring user privacy security from the architectural level."
+        }
+      },
+      "workflow": {
+        "title": "System Workflow",
+        "steps": {
+          "1": {
+            "title": "Resume Parsing",
+            "description": "Intelligently extracts key information from PDF/Word resumes, converting it into structured data."
+          },
+          "2": {
+            "title": "Job Matching Analysis",
+            "description": "Deeply analyzes target JDs, identifying skill gaps and keyword matching degrees."
+          },
+          "3": {
+            "title": "Smart Optimization Generation",
+            "description": "Based on analysis results, uses LLM to rewrite resume content, highlighting core strengths."
+          },
+          "4": {
+            "title": "Multi-modal Export",
+            "description": "Generates high-quality PDF documents, supporting various professional layout styles."
+          }
+        }
+      },
+      "ai": {
+        "tag": {
+          "name": "AI",
+          "description": "Smart Polish"
+        },
+        "title": "Smart Detection, Professional Advice",
+        "description": "Built-in smart grammar check, automatically identifies inappropriate expressions, provides professional modification suggestions, making your resume more outstanding.",
+        "benefit1": "Intelligent enhancement",
+        "benefit2": "Grammar check",
+        "alt": "AI Enhancement Preview"
+      },
+      "export": {
+        "tag": "Export to Multiple Formats",
+        "description": "Supports exporting in multiple formats for easy sharing and backup.",
+        "alt": "Export format illustration"
+      },
+      "privacy": {
+        "tag": {
+          "name": "Secure",
+          "description": "Data Security, Privacy First"
+        },
+        "description": "All resume data is fully stored locally, no need to worry about privacy leaks. Support data export backup, ensure your resume data is always available.",
+        "benefit1": "Local file storage",
+        "benefit2": "Multiple export formats"
+      },
+      "preview": {
+        "title": "Live Preview",
+        "description": "See your changes in real-time as you type. No more guessing how your final resume will look."
+      },
+      "dnd": {
+        "title": "Drag & Drop Interface",
+        "description": "Effortlessly reorder sections to highlight your strengths with an intuitive drag-and-drop interface."
+      }
+    },
+    "contact": {
+      "title": "Connect with Us",
+      "subtitle": "Have questions or feedback? We'd love to hear from you. Reach out to us and we'll get back to you as soon as possible.",
+      "button": "Contact Us"
+    },
+    "footer": {
+      "copyright": "© {{year}} Magic Resume. All rights reserved.",
+      "online": "Online",
+      "madeWith": "Made with ❤️ for job seekers",
+      "poweredBy": "Powered by AI & Modern Tech",
+      "openSource": "Open Source & Free Forever"
+    },
+    "buttons": {
+      "learnMore": "Learn More",
+      "experienceAI": "Experience AI Features",
+      "experienceNow": "Experience Now",
+      "starOnGithub": "Star on GitHub"
+    },
+    "tags": {
+      "aiSmart": "AI Smart",
+      "freeForever": "Completely Free",
+      "dataSecurity": "Data Security",
+      "aiEnhancement": "AI Enhancement",
+      "dataSecurityGuarantee": "Data Security Guarantee"
+    }
+  },
+  "modals": {
+    "dynamicForm": {
+      "editTitle": "Edit Item",
+      "addTitle": "Add New Item",
+      "descriptionLabel": "Description",
+      "cancelButton": "Cancel",
+      "saveButton": "Save"
+    },
+    "aiModal": {
+      "tabs": {
+        "create": " Guided Create",
+        "optimize": "Smart Optimize",
+        "analyze": "Resume Analysis",
+        "careerPath": "Career Path",
+        "mockInterview": "Mock Interview",
+        "coverLetter": "Cover Letter"
+      },
+      "title": "AI Lab",
+      "description": "Analyze and optimize your resume to match target job requirements, or get a professional Lighthouse-style analysis report.",
+      "mockInterview": {
+         "title": "AI Mock Interviewer",
+         "description": "Paste the job description below to start a realistic mock interview session based on your resume.",
+         "jdPlaceholder": "Paste Job Description here...",
+         "startBtn": "Start Interview",
+         "sessionTitle": "Interview Session",
+         "endBtn": "End Session",
+         "inputPlaceholder": "Type your answer..."
+      },
+      "coverLetter": {
+         "inputTitle": "Job Description",
+         "inputDesc": "Paste the JD here to generate a tailored cover letter.",
+         "jdPlaceholder": "Paste Job Description...",
+         "generateBtn": "Generate Letter",
+         "outputTitle": "Generated Cover Letter",
+         "emptyState": "Your cover letter will appear here",
+         "copied": "Copied to clipboard",
+         "error": "Failed to generate cover letter"
+      },
+      "careerPath": {
+         "targetRoleLabel": "Target Role (Optional)",
+         "targetRolePlaceholder": "e.g. Senior Product Manager",
+         "analyzeBtn": "Plan Career",
+         "skillsGapTitle": "Skills Gap Analysis",
+         "summaryTitle": "Analysis Summary",
+         "learningPathTitle": "Recommended Learning Path",
+         "emptyState": "Enter a target role or let AI infer it from your resume to generate a career path plan."
+      },
+      "optimizeTab": {
+        "jdLabel": "Target Job Description (JD)",
+        "jdPlaceholder": "Paste the target job's JD here, and the AI will optimize your resume based on it...",
+        "optimizeButton": "Start Optimization",
+        "optimizingButton": "Optimizing...",
+        "previewButton": "Preview",
+        "rawJsonButton": "Raw JSON",
+        "applyChangesButton": "Apply Changes",
+        "revertChangesButton": "Revert Changes",
+        "outputTitle": "Optimization Result",
+        "jsonButton": "JSON",
+        "steps": {
+          "preparer": {
+            "title": "Preparing Inputs",
+            "in_progress": "Preparing your resume and job description...",
+            "completed": "Input data is ready."
+          },
+          "parallel_analyzer": {
+            "title": "Parallel Analysis",
+            "in_progress": "Analyzing your resume from multiple dimensions...",
+            "completed": "All analyses complete!"
+          },
+          "analysis_parent": {
+            "in_progress": "Analyzing your resume from multiple dimensions...",
+            "completed": "All analyses complete!"
+          },
+          "combiner": {
+            "title": "Combine Analysis Report",
+            "in_progress": "Generating a comprehensive analysis report...",
+            "completed": "Analysis report generated."
+          },
+          "jd_analyzer": {
+            "title": "Analyzing Job Description",
+            "in_progress": "Analyzing the job description...",
+            "completed": "Job description analysis complete."
+          },
+          "prepare_research": {
+            "title": "Preparing Research",
+            "in_progress": "Preparing for web research based on JD...",
+            "completed": "Research plan is ready."
+          },
+          "query_writer": {
+            "title": "Generating Search Queries",
+            "in_progress": "Generating intelligent search queries...",
+            "completed": "Search queries generated."
+          },
+          "web_searcher": {
+            "title": "Performing Web Research",
+            "in_progress": "Searching the web for key information...",
+            "completed": "Web research complete."
+          },
+          "reflection": {
+            "title": "Reflecting on Search Results",
+            "in_progress": "Analyzing search results and identifying gaps...",
+            "completed": "Reflection complete, planning next steps."
+          },
+          "final_answer": {
+            "title": "Synthesizing Research Findings",
+            "in_progress": "Synthesizing research findings into a summary...",
+            "completed": "Research summary complete."
+          },
+          "rewriter": {
+            "title": "Resume Rewrite & Enhancement",
+            "in_progress": "Rewriting the resume based on the analysis report...",
+            "completed": "Resume successfully optimized!"
+          },
+          "prepare_rewriter": {
+            "title": "Preparing Rewrite Tasks",
+            "in_progress": "Preparing for section-by-section rewriting...",
+            "completed": "Switched to step-by-step optimization mode."
+          },
+          "rewrite_section": {
+            "title": "Step-by-Step Optimization",
+            "in_progress": "Optimizing in progress...",
+            "completed": "All sections have been optimized!"
+          },
+          "rewriting_section": {
+            "in_progress": "Optimizing {{section}}...",
+            "completed": "{{section}} optimized."
+          },
+          "analyzing_category": {
+            "in_progress": "Analyzing {{category}}...",
+            "completed": "{{category}} analysis complete."
+          }
+        },
+        "optimizationProgress": {
+          "analyzingJD": "Analyzing Job Description...",
+          "optimizing": "Optimizing your resume, please wait...",
+          "preparing": "Preparing to optimize {{count}} items...",
+          "optimizingItem": "Optimized {{sectionKey}} item {{completed}} of {{total}}...",
+          "done": "Done!"
+        }
+      },
+      "analysisTab": {
+        "title": "Resume Health Analysis",
+        "analyzeButton": "Analyze Resume",
+        "analyzingButton": "Analyzing...",
+        "viewReportButton": "View Report",
+        "reAnalyzeButton": "Re-analyze",
+        "analysisProgress": {
+          "start": "Starting analysis engine...",
+          "impact": "Assessing resume 'Impact & Action'...",
+          "quantification": "Checking use of 'Quantifiable Achievements'...",
+          "clarity": "Analyzing 'Clarity & Readability'...",
+          "completeness": "Reviewing 'Completeness & Structure'...",
+          "summary": "Evaluating 'Professional Summary' quality...",
+          "finalizing": "Compiling score and generating report...",
+          "done": "Analysis complete!"
+        },
+        "placeholder": {
+          "title": "Get Professional Analysis",
+          "description": "Our AI will perform a detailed analysis of your resume, providing scores and actionable feedback on impact, clarity, and keyword optimization."
+        }
+      },
+      "createTab": {
+        "chatTitle": "AI Assistant",
+        "previewTitle": "Live Resume Preview",
+        "inputPlaceholder": "Describe your skills or experience...",
+        "initialMessage": "Hello! I'm ResuMate, your personal resume crafting assistant. To start, what kind of job or industry are you targeting?",
+        "applyButton": "Apply and Save Resume",
+        "defaultReply": "Sorry, I'm having a little trouble right now. Could you please rephrase that?",
+        "errorReply": "I seem to have encountered an issue. Please try sending your message again.",
+        "retryNotification": "Request failed, retrying...",
+        "retryFailed": "Request failed after multiple retries. Please try again later."
+      },
+      "notifications": {
+        "apiKeyMissing": "API key not found. Please set it up in the settings page.",
+        "jdMissing": "Please provide a job description.",
+        "optimizationComplete": "AI optimization complete!",
+        "optimizationFailed": "Optimization failed: {{error}}",
+        "analysisComplete": "Analysis report has been generated!",
+        "analysisFailed": "Analysis failed: {{error}}",
+        "unknownError": "An unknown error has occurred.",
+        "creationFailed": "Resume creation failed: {{error}}"
+      },
+      "optimizePlaceholder": {
+        "title": "Ready to elevate your resume?",
+        "description": "Paste a job description and click \"Start Optimization\" to let the AI tailor your resume for your dream job."
+      },
+      "progressText": "AI is working hard on analysis and creation..."
+    }
+  },
+  "resumePreview": {
+    "yourName": "Your Name"
+  },
+  "tools": {
+    "aiAssistant": "AI Assistant",
+    "exportPDF": "Export PDF",
+    "zoomIn": "Zoom In",
+    "zoomOut": "Zoom Out",
+    "resetZoom": "Reset Zoom"
+  },
+  "sections": {
+    "projects": "Projects",
+    "education": "Education",
+    "skills": "Skills",
+    "languages": "Languages",
+    "certificates": "Certificates",
+    "experience": "Experience",
+    "profiles": "Profiles",
+    "shared": {
+      "untitled": "Untitled",
+      "show": "Show",
+      "hide": "Hide",
+      "edit": "Edit",
+      "copy": "Copy",
+      "remove": "Remove",
+      "addItem": "Add Item",
+      "openMenu": "Open menu",
+      "editTitle": "Edit {{label}}",
+      "addTitle": "Add New {{label}}"
+    },
+    "notifications": {
+      "requiredFields": "Please fill in the following required fields: {{fields}}",
+      "sectionUpdated": "{{label}} section updated successfully.",
+      "sectionAdded": "{{label}} section added successfully.",
+      "itemRemoved": "Item removed successfully.",
+      "itemCopied": "Item copied successfully.",
+      "visibilityToggled": "Item visibility {{status}}."
+    }
+  },
+  "basicForm": {
+    "fields": {
+      "avatar": "Avatar",
+      "fullName": "Full Name",
+      "headline": "Headline",
+      "email": "Email",
+      "website": "Website",
+      "phoneNumber": "Phone",
+      "address": "Location",
+      "link": "Link"
+    },
+    "customFields": {
+      "title": "Custom Fields",
+      "namePlaceholder": "Field Name (e.g., LinkedIn)",
+      "valuePlaceholder": "Value (e.g., your-linkedin-url)",
+      "addButton": "Add Custom Field"
+    },
+    "avatarAlt": "Avatar"
+  },
+  "mobileEdit": {
+    "jsonData": "Resume JSON Data",
+    "copyJson": "Copy JSON to clipboard"
+  },
+  "editPage": {
+    "sections": {
+      "basics": "Basics"
+    },
+    "notifications": {
+      "jsonDownloadStarted": "JSON file download started!"
+    },
+    "ai": {
+      "generatingSuggestion": "Generating personalized optimization suggestions for you..."
+    },
+    "errors": {
+      "resumeNotFound": "Resume Not Found",
+      "resumeNotFoundDescription": "The resume with ID {{id}} does not exist. It may have been deleted or the ID is incorrect.",
+      "goBack": "Go Back"
+    }
+  },
+  "templatePanel": {
+    "title": "Template",
+    "placeholder": "Template {{index}}"
+  },
+  "templateCustomizer": {
+    "title": "Custom Template",
+    "tabs": {
+      "colors": "Colors",
+      "typography": "Font", 
+      "layout": "Layout"
+    },
+    "colors": {
+      "quickThemes": "Quick Themes",
+      "customColors": "Custom Colors",
+      "primary": "Primary Color",
+      "secondary": "Secondary Color", 
+      "text": "Text Color",
+      "textSecondary": "Secondary Text Color",
+      "background": "Background Color",
+      "sidebar": "Sidebar Color"
+    },
+    "typography": {
+      "fontSettings": "Font Settings",
+      "primaryFont": "Primary Font",
+      "secondaryFont": "Secondary Font",
+      "fontSize": "Font Size"
+    },
+    "layout": {
+      "layoutSettings": "Layout Settings",
+      "containerSettings": "Container Settings",
+      "containerWidth": "Container Width",
+      "padding": "Padding",
+      "gap": "Gap",
+      "textSettings": "Text Settings",
+      "lineHeight": "Line Height",
+      "letterSpacing": "Letter Spacing",
+      "spacingSettings": "Spacing Settings",
+      "paragraphSpacing": "Paragraph Spacing",
+      "sectionSpacing": "Section Spacing"
+    },
+    "buttons": {
+      "backToTemplates": "Back to Templates"
+    }
+  },
+  "resumeContent": {
+    "viewJson": "View JSON",
+    "save": "Save"
+  },
+  "renameDialog": {
+    "title": "Rename Resume",
+    "placeholder": "Enter new resume name",
+    "cancel": "Cancel",
+    "rename": "Rename"
+  },
+  "newResumeDialog": {
+    "title": "Create New Resume",
+    "description": "Please enter a name for your new resume.",
+    "placeholder": "Resume Name",
+    "cancel": "Cancel",
+    "create": "Create"
+  },
+  "dashboard": {
+    "title": "Resumes",
+    "newResumeCard": {
+      "title": "Create a new resume",
+      "description": "Start building from scratch"
+    },
+    "importResumeCard": {
+      "title": "Import an existing resume",
+      "description": "LinkedIn, JSON Resume, etc."
+    },
+    "resumeCard": {
+      "lastUpdated": "Last updated {{time}}",
+      "rename": "Rename",
+      "duplicate": "Duplicate",
+      "delete": "Delete"
+    }
+  },
+  "sidebar": {
+    "resumes": "Resumes",
+    "settings": "Settings",
+    "open": "Open sidebar",
+    "close": "Close sidebar"
+  },
+  "importDialog": {
+    "title": "Import Resume from JSON",
+    "description": "Select or drop a JSON file below to create a new resume.",
+    "dropzone": {
+      "active": "Drop the file here...",
+      "default": "Drag 'n' drop a JSON file here, or click to select file",
+      "jsonOnly": "(.json file only)"
+    },
+    "errors": {
+      "fileReadAborted": "File reading was aborted.",
+      "fileReadFailed": "File reading has failed.",
+      "invalidFormat": "Invalid resume JSON format.",
+      "parseFailed": "Failed to parse JSON file."
+    },
+    "success": "Resume imported successfully!",
+    "importedName": "{{name}} (Imported)",
+    "cancel": "Cancel"
+  },
+  "dynamicForm": {
+    "fields": {
+      "education": {
+        "school": { "label": "School", "placeholder": "School Name" },
+        "degree": { "label": "Degree", "placeholder": "Degree" },
+        "major": { "label": "Major", "placeholder": "Major" },
+        "date": { "label": "Date or Date Range", "placeholder": "2019-2023" },
+        "location": { "label": "Location", "placeholder": "City" }
+      },
+      "experience": {
+        "company": { "label": "Company", "placeholder": "Company Name" },
+        "position": { "label": "Position", "placeholder": "Position" },
+        "date": { "label": "Date or Date Range", "placeholder": "March 2023 - Present" },
+        "location": { "label": "Location", "placeholder": "City" },
+        "website": { "label": "Website", "placeholder": "Website URL" }
+      },
+      "profiles": {
+        "platform": { "label": "Platform", "placeholder": "e.g., LinkedIn, GitHub" },
+        "url": { "label": "URL", "placeholder": "URL" }
+      },
+      "skills": {
+        "name": { "label": "Skill Name", "placeholder": "Skill Name" },
+        "level": { "label": "Level", "placeholder": "e.g., Expert, Intermediate, Beginner" }
+      },
+      "projects": {
+        "name": { "label": "Project Name", "placeholder": "Project Name" },
+        "role": { "label": "Role", "placeholder": "Your Role" },
+        "date": { "label": "Date or Date Range", "placeholder": "Jan 2022 - Dec 2022" },
+        "link": { "label": "Link", "placeholder": "Project Link" }
+      },
+      "languages": {
+        "language": { "label": "Language", "placeholder": "Language" },
+        "level": { "label": "Level", "placeholder": "e.g., Native, Fluent, Intermediate" }
+      },
+      "certificates": {
+        "name": { "label": "Certificate Name", "placeholder": "Certificate Name" },
+        "issuer": { "label": "Issuer", "placeholder": "Issuing Organization" },
+        "date": { "label": "Date", "placeholder": "Date Received" }
+      }
+    }
+  },
+  "tiptap": {
+    "prompt": {
+      "url": "URL"
+    },
+    "notifications": {
+      "polishingInProgress": "AI is already polishing. Please wait for it to finish.",
+      "polishFailed": "Failed to polish text: {{message}}",
+      "changesAccepted": "AI optimization applied",
+      "changesReverted": "Reverted to original text"
+    },
+    "acceptChanges": "Accept Changes",
+    "accept": "Accept",
+    "rejectChanges": "Reject Changes",
+    "reject": "Reject"
+  },
+  "export": {
+    "notifications": {
+      "success": "Resume exported successfully!",
+      "error": "Failed to export resume.",
+      "imageError": "Failed to load images for export.",
+      "elementNotFound": "Resume element not found",
+      "generating": "Generating PDF...",
+      "unknownError": "Unknown error",
+      "pdfGenerationFailed": "PDF generation failed"
+    }
+  },
+  "store": {
+    "notifications": {
+      "resumeCreated": "Resume \"{{name}}\" created.",
+      "resumeNotFound": "Resume not found for duplication.",
+      "resumeDuplicated": "Resume \"{{name}}\" duplicated.",
+      "resumeDeleted": "Resume \"{{name}}\" deleted.",
+      "resumeSaved": "Resume saved!"
+    }
+  },
+  "common": {
+    "notifications": {
+      "copySuccess": "JSON data copied to clipboard",
+      "copyFailed": "Copy failed, please try again",
+      "draftGenerated": "Resume draft generated! You can now click the preview button in the top right to view.",
+      "dataApplied": "Resume data has been applied to preview!",
+      "resumeApplied": "Resume applied!",
+      "generatingDraft": "Alright, I'll generate a resume draft based on our conversation...",
+      "generationError": "Sorry, encountered an issue while generating the resume. Please try again later.",
+      "generatingResume": "Generating resume..."
+    },
+    "ui": {
+      "hide": "Hide",
+      "view": "View",
+      "parseResumeData": "Parsed Resume Data",
+      "closePreview": "Close",
+      "previewResume": "Preview"
+    }
+  },
+  "report": {
+    "title": "Resume Analysis Report",
+    "subtitle": "Powered by AI, Inspired by Lighthouse",
+    "overallScore": "Overall Score",
+    "detailedAnalysis": "Detailed Analysis",
+    "suggestions": "Suggestions for Improvement:",
+    "categories": {
+      "KeySkillsMatch": "Key Skills Match",
+      "ImpactAndActionability": "Impact and Actionability",
+      "QuantifiableAchievements": "Quantifiable Achievements",
+      "ClarityAndReadability": "Clarity and Readability",
+      "ProfessionalSummary": "Professional Summary"
+    }
+  }
+}

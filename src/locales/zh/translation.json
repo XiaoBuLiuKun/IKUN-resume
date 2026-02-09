@@ -1,0 +1,714 @@
+{
+  "settings": {
+    "title": "设置",
+    "llm": {
+      "title": "模型接口配置",
+      "description1": "配置大语言模型接口，用于驱动简历内容的生成与优化功能。",
+      "description2": "您可以输入<1>OpenAI API 密钥</1>以启用完整的 AI 功能。若未配置，系统将无法进行智能优化。",
+      "description3": "本系统支持通过 OpenAI 兼容接口连接本地模型（如 Ollama）。设置 Base URL 为 `http://localhost:11434/v1` 即可连接本地部署的开源模型。",
+      "apiKeyLabel": "API 密钥 (API Key)",
+      "baseUrlLabel": "接口地址 (Base URL)",
+      "modelLabel": "模型名称 (Model)",
+      "maxTokensLabel": "最大令牌数 (Max Tokens)",
+      "modelPlaceholder": "输入模型名称，如 gpt-4o"
+    },
+    "notifications": {
+      "unsavedChanges": "配置未保存",
+      "settingsSaved": "配置已更新",
+      "changesReset": "已重置为默认值"
+    },
+    "buttons": {
+      "reset": "重置",
+      "save": "保存配置"
+    },
+    "goToApp": "进入系统",
+    "starOnGithub": "项目主页"
+  },
+  "landing": {
+    "nav": {
+      "goToApp": "进入系统",
+      "starOnGithub": "项目主页"
+    },
+    "hero": {
+      "title": "基于大语言模型的<1/>智能简历构建系统",
+      "subtitle": "融合 RAG 技术与提示词工程，实现简历内容的自动化生成与针对性优化，提升人岗匹配效率。",
+      "getStarted": "开始体验",
+      "browseTemplates": "查看模板",
+      "tag": "✨ 毕业设计项目展示"
+    },
+
+    "features": {
+      "main": {
+        "title": "系统核心功能架构",
+        "subtitle": "本系统基于现代 Web 技术栈与 LLM 能力，构建了从数据采集、内容生成到文档导出的完整工作流"
+      },
+      "background": {
+        "title": "研究背景与意义",
+        "subtitle": "针对当前就业市场痛点，利用前沿技术重构简历制作流程",
+        "cards": {
+          "market": {
+            "title": "就业市场竞争加剧",
+            "desc": "HR平均仅花费6秒浏览一份简历，传统通用型简历难以在海量候选人中脱颖而出。"
+          },
+          "pain": {
+            "title": "传统制作痛点",
+            "desc": "求职者面临排版繁琐、针对性差、内容空洞等问题，难以精准匹配不同岗位的需求。"
+          },
+          "solution": {
+            "title": "AI 赋能破局",
+            "desc": "通过大模型深度理解人岗匹配逻辑，实现简历内容的智能化定制与即时优化。"
+          }
+        }
+      },
+      "comparison": {
+        "title": "系统优势对比",
+        "subtitle": "突破传统简历制作的局限性",
+        "traditional": {
+          "title": "传统制作方式",
+          "points": [
+            "依赖通用模板，缺乏个性化",
+            "手动排版耗时费力",
+            "内容与职位JD匹配度低",
+            "缺乏专业的写作指导"
+          ]
+        },
+        "ourSystem": {
+          "title": "智能构建系统",
+          "points": [
+            "基于JD的针对性内容生成",
+            "一键自动排版与多格式导出",
+            "RAG引擎保障行业术语准确性",
+            "AI实时优化建议与评分"
+          ]
+        }
+      },
+      "innovations": {
+        "title": "主要创新点",
+        "subtitle": "本项目的技术突破与应用创新",
+        "tech": {
+          "title": "技术创新",
+          "desc": "首创基于混合检索（Hybrid Search）的简历-职位匹配算法，解决了长文本语义理解的精度问题。"
+        },
+        "mode": {
+          "title": "模式创新",
+          "desc": "将 'Lighthouse' 评分机制引入简历质量评估，建立了标准化的简历健康度指标体系。"
+        },
+        "interact": {
+          "title": "交互创新",
+          "desc": "实现了所见即所得的流式生成体验，支持对简历局部内容的即时 AI 润色与重写。"
+        }
+      },
+      "scenarios": {
+        "title": "典型应用场景",
+        "subtitle": "为不同求职阶段的用户提供定制化解决方案",
+        "fresh": {
+          "title": "应届毕业生",
+          "desc": "缺乏工作经验？AI 挖掘在校项目与实习经历亮点，转化成职场语言。"
+        },
+        "change": {
+          "title": "转行/跨专业",
+          "desc": "技能不匹配？智能分析过往经验中的可迁移能力，重构简历叙事逻辑。"
+        },
+        "expert": {
+          "title": "资深专家",
+          "desc": "经历太丰富？自动精简冗余信息，聚焦核心成就与领导力展现。"
+        }
+      },
+      "algorithm": {
+        "title": "核心算法策略",
+        "subtitle": "基于 RAG 与 Prompt Engineering 的双引擎驱动",
+        "rag": {
+          "title": "向量检索增强 (RAG)",
+          "desc": "构建专业技能与行业术语的向量数据库，通过余弦相似度检索最匹配的表达范式，解决大模型幻觉问题。"
+        },
+        "prompt": {
+          "title": "结构化提示工程 (Prompt Engineering)",
+          "desc": "设计 CoT (Chain of Thought) 提示链，引导模型按'职位分析-差距识别-内容重构-语言润色'四步生成高质量内容。"
+        }
+      },
+      "metrics": {
+        "title": "实验效果分析",
+        "subtitle": "基于测试集的系统性能评估指标",
+        "speed": "生成效率提升",
+        "accuracy": "人岗匹配度",
+        "satisfaction": "排版专业度"
+      },
+      "architecture": {
+        "title": "技术架构与实现",
+        "subtitle": "采用前沿的 AI 技术栈与现代前端框架，打造高性能、高可用的智能简历系统",
+        "llm": {
+          "title": "大语言模型引擎",
+          "description": "集成 OpenAI GPT-4 与本地开源模型（Ollama），通过 Prompt Engineering 实现精准的内容生成与优化。"
+        },
+        "rag": {
+          "title": "RAG 检索增强",
+          "description": "构建向量数据库，实现职位描述（JD）与简历内容的语义匹配，显著提升生成的针对性。"
+        },
+        "frontend": {
+          "title": "现代前端工程",
+          "description": "基于 Next.js 14 与 React Server Components，结合 Tailwind CSS 实现响应式设计与极致性能。"
+        },
+        "security": {
+          "title": "隐私安全架构",
+          "description": "采用 IndexedDB 进行纯前端数据存储，零服务端数据留存，从架构层面保障用户隐私安全。"
+        }
+      },
+      "workflow": {
+        "title": "系统工作流程",
+        "steps": {
+          "1": {
+            "title": "简历解析",
+            "description": "智能提取 PDF/Word 简历中的关键信息，转换为结构化数据。"
+          },
+          "2": {
+            "title": "人岗匹配分析",
+            "description": "深度分析目标职位 JD，识别技能缺口与关键词匹配度。"
+          },
+          "3": {
+            "title": "智能优化生成",
+            "description": "基于分析结果，利用 LLM 重写简历内容，突出核心优势。"
+          },
+          "4": {
+            "title": "多模态导出",
+            "description": "生成高质量 PDF 文档，支持多种专业排版风格。"
+          }
+        }
+      },
+      "ai": {
+        "tag": {
+          "name": "核心算法",
+          "description": "RAG & Prompt Engineering"
+        },
+        "title": "基于 LLM 的内容优化",
+        "description": "利用大语言模型的语义理解能力，对简历内容进行深度分析。结合检索增强生成（RAG）技术，根据职位描述（JD）自动生成高度匹配的简历内容。",
+        "benefit1": "基于上下文的智能生成",
+        "benefit2": "自动化的语法与逻辑检查",
+        "alt": "AI 优化流程演示"
+      },
+      "export": {
+        "tag": "文档生成模块",
+        "description": "基于 Puppeteer 的高保真 PDF 渲染引擎，支持复杂的排版布局，确保简历在不同设备与操作系统上的显示一致性。",
+        "alt": "多格式导出示例"
+      },
+      "privacy": {
+        "tag": {
+          "name": "数据隐私",
+          "description": "本地化存储方案"
+        },
+        "description": "采用 IndexedDB 进行浏览器端数据存储，所有个人敏感数据均在本地处理，符合数据安全与隐私保护规范。",
+        "benefit1": "完全本地化的数据管理",
+        "benefit2": "支持 JSON 格式的数据迁移"
+      },
+      "preview": {
+        "title": "实时渲染",
+        "description": "采用响应式渲染技术，实现编辑与预览的毫秒级同步，提供所见即所得的操作体验。"
+      },
+      "dnd": {
+        "title": "交互式排版",
+        "description": "基于拖拽交互（Drag-and-Drop）的模块化排版系统，允许用户自由调整简历结构。"
+      }
+    },
+    "contact": {
+      "title": "项目致谢",
+      "subtitle": "感谢指导老师的悉心教导，以及实验室同学们的帮助。本项目旨在探索大模型在垂直领域的应用潜力。"
+    },
+    "footer": {
+      "copyright": "© {{year}} 毕业设计项目. All rights reserved.",
+      "online": "在线",
+      "madeWith": "基于 Next.js 与 AI 技术构建",
+      "poweredBy": "学术研究用途",
+      "openSource": "仅供学习交流"
+    },
+    "buttons": {
+      "learnMore": "了解更多",
+      "experienceAI": "体验算法模块",
+      "experienceNow": "进入系统",
+      "starOnGithub": "项目代码"
+    },
+    "tags": {
+      "aiSmart": "智能算法",
+      "freeForever": "开源架构",
+      "dataSecurity": "隐私保护",
+      "aiEnhancement": "LLM 驱动",
+      "dataSecurityGuarantee": "安全架构"
+    }
+  },
+  "modals": {
+    "dynamicForm": {
+      "editTitle": "编辑项目",
+      "addTitle": "添加新项目",
+      "descriptionLabel": "描述",
+      "cancelButton": "取消",
+      "saveButton": "保存"
+    },
+    "aiModal": {
+      "tabs": {
+        "create": "引导创建",
+        "optimize": "智能优化",
+        "analyze": "简历分析",
+        "careerPath": "职业规划",
+        "mockInterview": "模拟面试",
+        "coverLetter": "求职信"
+      },
+      "title": "AI 实验室",
+      "description": "分析和优化您的简历以匹配目标工作要求，或获取专业的Lighthouse式分析报告。",
+      "mockInterview": {
+         "title": "AI 模拟面试官",
+         "description": "在下方粘贴职位描述，AI 将基于您的简历开始一场真实的模拟面试。",
+         "jdPlaceholder": "在此粘贴职位描述...",
+         "startBtn": "开始面试",
+         "sessionTitle": "面试进行中",
+         "endBtn": "结束面试",
+         "inputPlaceholder": "输入您的回答..."
+      },
+      "coverLetter": {
+         "inputTitle": "职位描述",
+         "inputDesc": "在此粘贴 JD 以生成定制化的求职信。",
+         "jdPlaceholder": "粘贴职位描述...",
+         "generateBtn": "生成求职信",
+         "outputTitle": "生成的求职信",
+         "emptyState": "您的求职信将显示在这里",
+         "copied": "已复制到剪贴板",
+         "error": "生成求职信失败"
+      },
+      "careerPath": {
+         "targetRoleLabel": "目标职位 (可选)",
+         "targetRolePlaceholder": "例如：高级产品经理",
+         "analyzeBtn": "规划职业路径",
+         "skillsGapTitle": "技能差距分析",
+         "summaryTitle": "分析总结",
+         "learningPathTitle": "推荐学习路径",
+         "emptyState": "输入目标职位，或让 AI 根据您的简历自动推断，以生成职业路径规划。"
+      },
+      "optimizeTab": {
+        "jdLabel": "目标职位描述 (JD)",
+        "jdPlaceholder": "在此处粘贴目标职位的 JD，AI 将据此优化您的简历...",
+        "optimizeButton": "开始优化",
+        "optimizingButton": "优化中...",
+        "previewButton": "预览",
+        "rawJsonButton": "查看原始 JSON",
+        "applyChangesButton": "应用更改",
+        "revertChangesButton": "还原更改",
+        "outputTitle": "优化结果",
+        "jsonButton": "JSON",
+        "steps": {
+          "preparer": {
+            "title": "准备输入数据",
+            "in_progress": "正在准备您的简历和职位描述...",
+            "completed": "输入数据已就绪。"
+          },
+          "parallel_analyzer": {
+            "title": "并行分析",
+            "in_progress": "正在从多个维度分析您的简历...",
+            "completed": "所有分析已完成！"
+          },
+          "analysis_parent": {
+            "in_progress": "正在从多个维度分析您的简历...",
+            "completed": "所有分析已完成！"
+          },
+          "combiner": {
+            "title": "合并分析报告",
+            "in_progress": "正在生成综合分析报告...",
+            "completed": "分析报告已生成。"
+          },
+          "jd_analyzer": {
+            "title": "分析职位描述",
+            "in_progress": "正在分析职位描述...",
+            "completed": "职位描述分析完成。"
+          },
+          "prepare_research": {
+            "title": "准备研究",
+            "in_progress": "正在根据职位描述准备网络研究...",
+            "completed": "研究计划已就绪。"
+          },
+          "query_writer": {
+            "title": "生成搜索查询",
+            "in_progress": "正在生成智能搜索查询...",
+            "completed": "搜索查询已生成。"
+          },
+          "web_searcher": {
+            "title": "执行网络研究",
+            "in_progress": "正在网络上搜索关键信息...",
+            "completed": "网络研究完成。"
+          },
+          "reflection": {
+            "title": "反思搜索结果",
+            "in_progress": "正在分析搜索结果并识别信息差距...",
+            "completed": "反思完成，规划下一步。"
+          },
+          "final_answer": {
+            "title": "综合研究发现",
+            "in_progress": "正在将研究发现整合成摘要...",
+            "completed": "研究摘要完成。"
+          },
+          "rewriter": {
+            "title": "简历改写与增强",
+            "in_progress": "正在根据分析报告重写简历...",
+            "completed": "简历已成功优化！"
+          },
+          "prepare_rewriter": {
+            "title": "准备重写任务",
+            "in_progress": "正在准备按章节重写...",
+            "completed": "已切换到分步优化模式。"
+          },
+          "rewrite_section": {
+            "title": "分步优化",
+            "in_progress": "正在优化中...",
+            "completed": "所有章节均已优化！"
+          },
+          "rewriting_section": {
+            "in_progress": "正在优化 {{section}}...",
+            "completed": "{{section}} 已优化完毕。"
+          },
+          "analyzing_category": {
+            "in_progress": "正在分析 {{category}}...",
+            "completed": "{{category}} 分析完毕。"
+          }
+        },
+        "optimizationProgress": {
+          "analyzingJD": "正在分析职位描述...",
+          "optimizing": "正在为您优化简历，请稍候...",
+          "preparing": "正在准备优化 {{count}} 个项目...",
+          "optimizingItem": "已优化 {{sectionKey}} 第 {{completed}} 项，共 {{total}} 项...",
+          "done": "完成！"
+        }
+      },
+      "analysisTab": {
+        "title": "简历健康分析",
+        "analyzeButton": "分析简历",
+        "analyzingButton": "分析中...",
+        "viewReportButton": "查看报告",
+        "reAnalyzeButton": "重新分析",
+        "analysisProgress": {
+          "start": "正在启动分析引擎...",
+          "impact": "正在评估简历的'影响力与行动'...",
+          "quantification": "正在检查'可量化成就'的使用情况...",
+          "clarity": "正在分析'清晰度与可读性'...",
+          "completeness": "正在审查'完整性与结构'...",
+          "summary": "正在评估'专业摘要'的质量...",
+          "finalizing": "正在编译分数并生成报告...",
+          "done": "分析完成！"
+        },
+        "placeholder": {
+          "title": "获取专业分析",
+          "description": "我们的 AI 将对您的简历进行详细分析，提供关于影响力、清晰度和关键词优化等方面的分数和可操作反馈。"
+        }
+      },
+      "createTab": {
+        "chatTitle": "AI 助手",
+        "previewTitle": "简历实时预览",
+        "inputPlaceholder": "请描述您的技能或经历...",
+        "initialMessage": "你好！我是 ResuMate，你的个人简历构建助手。首先，请告诉我你的目标工作或行业是什么？",
+        "applyButton": "应用并保存简历",
+        "defaultReply": "抱歉，我现在遇到一点麻烦。你能换个说法吗？",
+        "errorReply": "我似乎遇到了一个问题。请尝试重新发送您的消息。",
+        "retryNotification": "请求失败，正在重试...",
+        "retryFailed": "多次重试后请求失败，请稍后再试。"
+      },
+      "notifications": {
+        "apiKeyMissing": "未找到 API 密钥。请在设置页面中设置。",
+        "jdMissing": "请提供职位描述。",
+        "optimizationComplete": "AI 优化完成！",
+        "optimizationFailed": "优化失败：{{error}}",
+        "analysisComplete": "分析报告已生成！",
+        "analysisFailed": "分析失败：{{error}}",
+        "unknownError": "发生未知错误。",
+        "creationFailed": "简历创建失败：{{error}}"
+      },
+      "optimizePlaceholder": {
+        "title": "准备好提升您的简历了吗？",
+        "description": "粘贴职位描述并点击\"开始优化\"，让 AI 为您的梦想工作量身定制简历。"
+      },
+      "progressText": "AI 正在努力进行分析和创作..."
+    }
+  },
+  "resumePreview": {
+    "yourName": "你的名字"
+  },
+  "tools": {
+    "aiAssistant": "AI 助手",
+    "exportPDF": "导出 PDF",
+    "zoomIn": "放大",
+    "zoomOut": "缩小",
+    "resetZoom": "重置缩放"
+  },
+  "sections": {
+    "projects": "项目",
+    "education": "教育",
+    "skills": "技能",
+    "languages": "语言",
+    "certificates": "证书",
+    "experience": "经历",
+    "profiles": "个人资料",
+    "shared": {
+      "untitled": "无标题",
+      "show": "显示",
+      "hide": "隐藏",
+      "edit": "编辑",
+      "copy": "复制",
+      "remove": "移除",
+      "addItem": "添加项目",
+      "openMenu": "打开菜单",
+      "editTitle": "编辑 {{label}}",
+      "addTitle": "添加新的 {{label}}"
+    },
+    "notifications": {
+      "requiredFields": "请填写以下必填字段：{{fields}}",
+      "sectionUpdated": "{{label}} 部分已成功更新。",
+      "sectionAdded": "{{label}} 部分已成功添加。",
+      "itemRemoved": "项目已成功移除。",
+      "itemCopied": "项目已成功复制。",
+      "visibilityToggled": "项目可见性 {{status}}。"
+    }
+  },
+  "basicForm": {
+    "fields": {
+      "avatar": "头像",
+      "fullName": "全名",
+      "headline": "标题",
+      "email": "电子邮件",
+      "website": "网站",
+      "phoneNumber": "电话",
+      "address": "地点",
+      "link": "链接"
+    },
+    "customFields": {
+      "title": "自定义字段",
+      "namePlaceholder": "字段名称（例如，LinkedIn）",
+      "valuePlaceholder": "值（例如，your-linkedin-url）",
+      "addButton": "添加自定义字段"
+    },
+    "avatarAlt": "头像"
+  },
+  "mobileEdit": {
+    "jsonData": "简历 JSON 数据",
+    "copyJson": "将 JSON 复制到剪贴板"
+  },
+  "editPage": {
+    "sections": {
+      "basics": "基本信息"
+    },
+    "notifications": {
+      "jsonDownloadStarted": "JSON 文件下载已开始！"
+    },
+    "ai": {
+      "generatingSuggestion": "正在为您生成专属优化建议..."
+    },
+    "errors": {
+      "resumeNotFound": "简历未找到",
+      "resumeNotFoundDescription": "ID为 {{id}} 的简历不存在，可能已被删除或ID错误。",
+      "goBack": "返回"
+    }
+  },
+  "templatePanel": {
+    "title": "模板",
+    "placeholder": "模板 {{index}}"
+  },
+  "templateCustomizer": {
+    "title": "自定义模板",
+    "tabs": {
+      "colors": "颜色",
+      "typography": "字体", 
+      "layout": "布局"
+    },
+    "colors": {
+      "quickThemes": "快速主题",
+      "customColors": "自定义颜色",
+      "primary": "主色调",
+      "secondary": "次色调", 
+      "text": "文本颜色",
+      "textSecondary": "次要文本颜色",
+      "background": "背景颜色",
+      "sidebar": "侧边栏颜色"
+    },
+    "typography": {
+      "fontSettings": "字体设置",
+      "primaryFont": "主字体",
+      "secondaryFont": "次要字体",
+      "fontSize": "字体大小"
+    },
+    "layout": {
+      "layoutSettings": "布局设置",
+      "containerSettings": "容器设置",
+      "containerWidth": "容器宽度",
+      "padding": "内边距",
+      "gap": "组件间距",
+      "textSettings": "文本设置",
+      "lineHeight": "行高倍数",
+      "letterSpacing": "字符间距",
+      "spacingSettings": "边距设置",
+      "paragraphSpacing": "段落间距",
+      "sectionSpacing": "大段落间距"
+    },
+    "buttons": {
+      "backToTemplates": "返回模板列表"
+    }
+  },
+  "resumeContent": {
+    "viewJson": "查看 JSON",
+    "save": "保存"
+  },
+  "renameDialog": {
+    "title": "重命名简历",
+    "placeholder": "输入新的简历名称",
+    "cancel": "取消",
+    "rename": "重命名"
+  },
+  "newResumeDialog": {
+    "title": "新建简历",
+    "description": "请输入新简历的名称。",
+    "placeholder": "简历名称",
+    "cancel": "取消",
+    "create": "创建"
+  },
+  "dashboard": {
+    "title": "简历",
+    "newResumeCard": {
+      "title": "创建新简历",
+      "description": "从头开始构建"
+    },
+    "importResumeCard": {
+      "title": "导入现有简历",
+      "description": "领英、JSON简历等"
+    },
+    "resumeCard": {
+      "lastUpdated": "最后更新于 {{time}}",
+      "rename": "重命名",
+      "duplicate": "复制",
+      "delete": "删除"
+    }
+  },
+  "sidebar": {
+    "resumes": "简历",
+    "settings": "设置",
+    "open": "打开侧边栏",
+    "close": "关闭侧边栏"
+  },
+  "importDialog": {
+    "title": "从 JSON 导入简历",
+    "description": "在下方选择或拖放一个 JSON 文件以创建新简历。",
+    "dropzone": {
+      "active": "在此处放下文件...",
+      "default": "将 JSON 文件拖放到此处，或点击选择文件",
+      "jsonOnly": "（仅限 .json 文件）"
+    },
+    "errors": {
+      "fileReadAborted": "文件读取已中止。",
+      "fileReadFailed": "文件读取失败。",
+      "invalidFormat": "无效的简历 JSON 格式。",
+      "parseFailed": "解析 JSON 文件失败。"
+    },
+    "success": "简历导入成功！",
+    "importedName": "{{name}}（已导入）",
+    "cancel": "取消"
+  },
+  "dynamicForm": {
+    "fields": {
+      "education": {
+        "school": { "label": "学校", "placeholder": "学校名称" },
+        "degree": { "label": "学位", "placeholder": "学位" },
+        "major": { "label": "专业", "placeholder": "专业" },
+        "date": { "label": "日期或日期范围", "placeholder": "2019-2023" },
+        "location": { "label": "地点", "placeholder": "城市" }
+      },
+      "experience": {
+        "company": { "label": "公司", "placeholder": "公司名称" },
+        "position": { "label": "职位", "placeholder": "职位" },
+        "date": { "label": "日期或日期范围", "placeholder": "2023年3月至今" },
+        "location": { "label": "地点", "placeholder": "城市" },
+        "website": { "label": "网站", "placeholder": "公司网址" }
+      },
+      "profiles": {
+        "platform": { "label": "平台", "placeholder": "如 领英, GitHub" },
+        "url": { "label": "网址", "placeholder": "链接地址" }
+      },
+      "skills": {
+        "name": { "label": "技能名称", "placeholder": "技能名称" },
+        "level": { "label": "熟练度", "placeholder": "如 精通, 熟练, 初级" }
+      },
+      "projects": {
+        "name": { "label": "项目名称", "placeholder": "项目名称" },
+        "role": { "label": "角色", "placeholder": "担任角色" },
+        "date": { "label": "日期或日期范围", "placeholder": "2022.01-2022.12" },
+        "link": { "label": "链接", "placeholder": "项目链接" }
+      },
+      "languages": {
+        "language": { "label": "语言", "placeholder": "语言" },
+        "level": { "label": "熟练度", "placeholder": "如 母语, 流利, 中级" }
+      },
+      "certificates": {
+        "name": { "label": "证书名称", "placeholder": "证书名称" },
+        "issuer": { "label": "颁发机构", "placeholder": "颁发机构" },
+        "date": { "label": "获得时间", "placeholder": "获得时间" }
+      }
+    }
+  },
+  "tiptap": {
+    "prompt": {
+      "url": "网址"
+    },
+    "notifications": {
+      "polishingInProgress": "AI 已经在润色中，请等待完成。",
+      "polishFailed": "润色文本失败: {{message}}",
+      "changesAccepted": "AI优化已应用",
+      "changesReverted": "已回退到原始文本"
+    },
+    "acceptChanges": "接受更改",
+    "accept": "接受",
+    "rejectChanges": "回退更改",
+    "reject": "回退"
+  },
+  "export": {
+    "notifications": {
+      "success": "简历导出成功！",
+      "error": "导出简历失败。",
+      "imageError": "加载用于导出的图片失败。",
+      "elementNotFound": "找不到简历元素",
+      "generating": "正在生成PDF...",
+      "unknownError": "未知错误",
+      "pdfGenerationFailed": "PDF生成失败"
+    }
+  },
+  "store": {
+    "notifications": {
+      "resumeCreated": "简历 \"{{name}}\" 已创建。",
+      "resumeNotFound": "未找到要复制的简历。",
+      "resumeDuplicated": "简历 \"{{name}}\" 已成功复制。",
+      "resumeDeleted": "简历 \"{{name}}\" 已删除。",
+      "resumeSaved": "简历已保存！"
+    }
+  },
+  "common": {
+    "notifications": {
+      "copySuccess": "JSON数据已复制到剪贴板",
+      "copyFailed": "复制失败，请重试",
+      "draftGenerated": "简历草稿已生成！现在您可以点击右上角的预览按钮查看。",
+      "dataApplied": "简历数据已应用到预览中！",
+      "resumeApplied": "简历已应用！",
+      "generatingDraft": "好的，我将根据我们的对话为您生成一份简历草稿...",
+      "generationError": "抱歉，生成简历时遇到问题，请稍后再试。",
+      "generatingResume": "正在生成简历中..."
+    },
+    "ui": {
+      "hide": "隐藏",
+      "view": "查看",
+      "parseResumeData": "解析的简历数据",
+      "closePreview": "关闭",
+      "previewResume": "预览"
+    }
+  },
+  "report": {
+    "title": "简历分析报告",
+    "subtitle": "由 AI 驱动，灵感源自 Lighthouse",
+    "overallScore": "综合得分",
+    "detailedAnalysis": "详细分析",
+    "suggestions": "改进建议:",
+    "categories": {
+      "KeySkillsMatch": "核心技能匹配度",
+      "ImpactAndActionability": "影响力与行动性",
+      "QuantifiableAchievements": "可量化成就",
+      "ClarityAndReadability": "清晰度与可读性",
+      "ProfessionalSummary": "专业摘要"
+    }
+  }
+}
