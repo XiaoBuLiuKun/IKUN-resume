@@ -25,13 +25,15 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-  params: { lang }
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  params
 }: Readonly<{
   children: React.ReactNode;
-  params: { lang: string };
+  params: Promise<any>;
 }>) {
+  const { lang } = await params;
   return (
     <ClerkProvider>
       <html lang={lang} className="hide-scrollbar">
