@@ -63,7 +63,7 @@ function ResumeCard({
       layout
     >
       <Card className="group h-64 flex flex-col justify-between cursor-pointer relative overflow-hidden bg-neutral-900 border border-neutral-800 hover:border-neutral-700">
-        <Link href={`/dashboard/edit/${resume.id}`} className="block w-full h-full">
+        <Link href={`/dashboard/edit?id=${resume.id}`} className="block w-full h-full">
           <div className="relative w-full h-full">
             {imageUrl ? (
               <Image

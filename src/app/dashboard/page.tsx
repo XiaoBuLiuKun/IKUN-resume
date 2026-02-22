@@ -70,7 +70,7 @@ export default function Dashboard() {
       };
       addResume(newResume);
       setDialogOpen(false);
-      router.push(`/dashboard/edit/${newId}`);
+      router.push(`/dashboard/edit?id=${newId}`);
     }
   };
 

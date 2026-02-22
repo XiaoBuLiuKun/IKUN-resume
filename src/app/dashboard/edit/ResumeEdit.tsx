@@ -2,10 +2,10 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Resume, useResumeStore } from '@/store/useResumeStore';
 import { FaUser } from 'react-icons/fa';
-import BasicForm from '../_components/BasicForm';
+import BasicForm from './_components/BasicForm';
 import sidebarMenu from '@/constant/sidebarMenu';
 import dynamic from 'next/dynamic';
-import SectionListWithModal from '../_components/SectionListWithModal';
+import SectionListWithModal from './_components/SectionListWithModal';
 import { dynamicFormFields } from '@/constant/dynamicFormFields';
 import {
   DndContext,
@@ -28,14 +28,14 @@ import TemplatePanel from './TemplatePanel';
 import ResumeContent from './ResumeContent';
 import { Section, SectionItem } from '@/store/useResumeStore';
 import useMobile from '@/app/hooks/useMobile';
-import MobileResumEdit from '../_components/mobile/MobileResumEdit';
+import MobileResumEdit from './_components/mobile/MobileResumEdit';
 import { generateSnapshot } from '@/lib/utils';
-import AIModal from '../_components/AIModal';
+import AIModal from './_components/AIModal';
 import { useTranslation } from 'react-i18next';
 import { Loader2 } from 'lucide-react';
-import JsonModal from '../_components/JsonModal';
+import JsonModal from './_components/JsonModal';
 
-const ResumePreviewPanel = dynamic(() => import('../_components/ResumePreviewPanel'), { 
+const ResumePreviewPanel = dynamic(() => import('./_components/ResumePreviewPanel'), { 
   ssr: false,
   loading: () => (
     <div className="w-full h-full bg-black flex items-center justify-center text-white">
@@ -63,7 +63,12 @@ function SortableSection({ id, children, disabled }: { id: string, children: Rea
   );
 }
 
-export default function ResumeEdit({ id }: ResumeEditProps) {
+import { useSearchParams } from 'next/navigation';
+
+export default function ResumeEdit({ id: propId }: { id?: string }) {
+  const searchParams = useSearchParams();
+  const id = propId || searchParams.get('id') || '';
+
   const {
     activeResume,
     loadResumeForEdit,

@@ -9,7 +9,7 @@ import { getMagicTemplateList } from '@/templates/config/magic-templates';
 import { MagicTemplateDSL } from '@/templates/types/magic-dsl';
 import { motion, AnimatePresence } from 'framer-motion';
 import TemplatePreviewCard from './TemplatePreviewCard';
-import TemplateCustomizer from '../../../../templates/TemplateCustomizer';
+import TemplateCustomizer from '../../../templates/TemplateCustomizer';
 import { useResumeStore } from '@/store/useResumeStore';
 import { extractCustomConfig, mergeTemplateConfig } from '@/lib/templateUtils';
 
