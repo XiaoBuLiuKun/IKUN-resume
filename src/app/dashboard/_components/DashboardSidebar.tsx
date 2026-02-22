@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { UserButton, useUser } from '@clerk/nextjs';
+// import { UserButton, useUser } from '@clerk/nextjs';
 import { motion, AnimatePresence } from 'framer-motion';
 import useMobile from '@/app/hooks/useMobile';
 import { FiMenu, FiX } from 'react-icons/fi';
@@ -28,7 +28,7 @@ export default function DashboardSidebar() {
 
   const { isMobile } = useMobile();
   const [isOpen, setIsOpen] = useState(false);
-  const { user } = useUser();
+  // const { user } = useUser();
   const pathname = usePathname();
   const [hasMounted, setHasMounted] = useState(false);
   const { activeResume, setActiveSection } = useResumeStore();
@@ -58,13 +58,14 @@ export default function DashboardSidebar() {
           </Link>
         ))}
       </nav>
-      <div className="px-6 mt-auto flex items-center gap-3">
+      {/* 移除用户登录信息显示 */}
+      {/* <div className="px-6 mt-auto flex items-center gap-3">
         <UserButton afterSignOutUrl="/" />
         <div className='flex flex-col'>
           <span className='text-sm font-bold'>{user?.fullName}</span>
           <span className='text-xs text-neutral-400'>{user?.primaryEmailAddress?.emailAddress}</span>
         </div>
-      </div>
+      </div> */}
     </>
   );
 
@@ -112,7 +113,7 @@ export default function DashboardSidebar() {
           })}
         </nav>
         <div className="mt-auto">
-          <UserButton afterSignOutUrl="/" />
+          {/* <UserButton afterSignOutUrl="/" /> */}
         </div>
       </aside>
     );
