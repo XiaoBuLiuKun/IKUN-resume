@@ -1,5 +1,7 @@
 import ResumeEdit from './ResumeEdit';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Page({
   params,
 }: {
