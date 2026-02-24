@@ -50,7 +50,7 @@ export default function StructuredData({ type, data = {} }: StructuredDataProps)
           "name": "Magic Resume",
           "alternateName": "魔法简历",
           "url": baseUrl,
-          "logo": `${baseUrl}/magic-resume-logo.png`,
+          "logo": `${baseUrl}/vercel.svg`,
           "description": "专业的AI简历制作平台，帮助求职者制作完美简历",
           "foundingDate": "2024",
           "contactPoint": {
@@ -207,7 +207,7 @@ export default function StructuredData({ type, data = {} }: StructuredDataProps)
             "name": "Magic Resume",
             "logo": {
               "@type": "ImageObject",
-              "url": `${baseUrl}/magic-resume-logo.png`
+              "url": `${baseUrl}/vercel.svg`
             }
           },
           "datePublished": data.publishDate || new Date().toISOString(),

@@ -7,7 +7,6 @@ import { Button } from '@/app/components/ui/button';
 import { ChevronDown, ChevronUp, User, Bot, FileText, Copy } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import { toast } from 'sonner';
-import { useUser } from '@clerk/nextjs';
 import Image from 'next/image';
 import { EditorComponents } from '@/lib/componentOptimization';
 import { useTranslation } from 'react-i18next';
@@ -26,7 +25,6 @@ export const MessageItem: React.FC<MessageItemProps> = ({
   const [showJson, setShowJson] = useState(false);
   const isUser = message.role === 'user';
   const hasJsonData = message.jsonData && typeof message.jsonData === 'object';
-  const { user } = useUser();
   const { t } = useTranslation();
 
   const copyJsonToClipboard = async () => {
@@ -48,21 +46,7 @@ export const MessageItem: React.FC<MessageItemProps> = ({
           ${isUser ? 'bg-neutral-600' : 'bg-gradient-to-br from-blue-500 to-purple-600'}
         `}
       >
-        {isUser ? (
-          user?.imageUrl ? (
-            <Image 
-              src={user.imageUrl} 
-              alt="User Avatar" 
-              width={32} 
-              height={32} 
-              className="w-full h-full object-cover"
-            />
-          ) : (
-            <User className="w-4 h-4 text-white" />
-          )
-        ) : (
-          <Bot className="w-4 h-4 text-white" />
-        )}
+        {isUser ? <User className="w-4 h-4 text-white" /> : <Bot className="w-4 h-4 text-white" />}
       </div>
 
       {/* 消息内容 */}

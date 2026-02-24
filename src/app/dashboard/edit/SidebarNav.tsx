@@ -1,11 +1,5 @@
 import Link from 'next/link';
 import React from 'react';
-import {
-  UserButton,
-  ClerkLoading,
-  ClerkLoaded,
-} from "@clerk/nextjs";
-import Image from 'next/image';
 import { Skeleton } from '@/app/components/ui/Skeleton';
 import { Button } from '@/app/components/ui/button';
 
@@ -25,9 +19,11 @@ export default function SidebarNav({ sidebarMenu, handleSidebarClick }: SidebarN
     <aside className="relative transition-all duration-300 bg-neutral-900 border-r border-neutral-800 py-6 px-3 pb-4 items-center w-[72px]">
       <div className="flex flex-col justify-around w-full h-full items-center">
         <div className="mb-4 text-xl font-bold select-none flex items-center justify-center w-full">
-          <Link href={'/dashboard'}><div className="mb-4 text-2xl font-bold select-none flex items-center justify-center w-full cursor-pointer">
-            <Image src="/simple-logo.png" alt="simple-logo" width={40} height={40} />
-          </div></Link>
+          <Link href="/dashboard">
+            <div className="mb-4 text-2xl font-bold select-none flex items-center justify-center w-full cursor-pointer bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+              SR
+            </div>
+          </Link>
         </div>
 
         <div className='flex-1 flex flex-col items-center justify-center gap-2'>
@@ -43,16 +39,7 @@ export default function SidebarNav({ sidebarMenu, handleSidebarClick }: SidebarN
           ))}
         </div>
 
-        <div className="mt-auto">
-          <div className="flex flex-col items-center gap-2 mb-2">
-            <ClerkLoading>
-              <Skeleton className="w-8 h-8 rounded-full" />
-            </ClerkLoading>
-            <ClerkLoaded>
-              <UserButton afterSignOutUrl="/" />
-            </ClerkLoaded>
-          </div>
-        </div>
+        <div className="mt-auto" />
       </div>
     </aside>
   );

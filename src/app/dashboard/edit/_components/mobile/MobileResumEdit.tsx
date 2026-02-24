@@ -7,7 +7,6 @@ import { FaCopy } from "react-icons/fa";
 import ResumeContent from "../../ResumeContent";
 import TemplatePanel from "../../TemplatePanel";
 import Modal from "@/app/components/ui/Modal";
-import Image from "next/image";
 import { Resume } from "@/store/useResumeStore";
 import React from "react";
 import { useTranslation } from "react-i18next";
@@ -66,7 +65,9 @@ export default function MobileResumEdit({
         <div className="fixed w-[90vw] top-6 left-1/2 -translate-x-1/2 z-10 flex items-center justify-between gap-4">
             <Button onClick={() => setLeftPanelOpen(true)} className="rounded-full h-12 w-12"><FiEdit /></Button>
             <Link href="/dashboard" className="rounded-full h-12 w-12 flex items-center justify-center">
-                <Image src="/simple-logo.png" alt="Magic Resume Logo" width={50} height={50} />
+                <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                    SR
+                </span>
             </Link>
             <Button onClick={() => setRightPanelOpen(true)} className="rounded-full h-12 w-12"><FiLayout /></Button>
         </div>
@@ -115,8 +116,8 @@ export default function MobileResumEdit({
                         className="fixed top-0 right-0 h-full w-[280px] z-30"
                     >
                         <TemplatePanel
-                            rightCollapsed={false}
-                            setRightCollapsed={() => { }}
+                            rightCollapsed={!rightPanelOpen}
+                            setRightCollapsed={(collapsed) => setRightPanelOpen(!collapsed)}
                             onSelectTemplate={setCurrentTemplateId}
                             currentTemplateId={currentTemplateId}
                         />

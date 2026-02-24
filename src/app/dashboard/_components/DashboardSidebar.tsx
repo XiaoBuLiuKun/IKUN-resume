@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-// import { UserButton, useUser } from '@clerk/nextjs';
 import { motion, AnimatePresence } from 'framer-motion';
 import useMobile from '@/app/hooks/useMobile';
 import { FiMenu, FiX } from 'react-icons/fi';
