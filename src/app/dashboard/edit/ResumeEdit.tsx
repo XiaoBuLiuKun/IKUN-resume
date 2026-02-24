@@ -301,6 +301,8 @@ export default function ResumeEdit({ id: propId }: { id?: string }) {
         handleSave={handleSave}
         onShowAI={openAIModal}
         isAiJobRunning={isAiJobRunning}
+        onSelectTemplate={handleSelectTemplate}
+        currentTemplateId={currentTemplateId}
       />
     );
   }

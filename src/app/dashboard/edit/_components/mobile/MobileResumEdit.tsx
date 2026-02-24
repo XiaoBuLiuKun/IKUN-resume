@@ -30,6 +30,8 @@ interface MobileResumEditProps {
     handleSave: () => void;
     onShowAI: () => void;
     isAiJobRunning: boolean;
+    onSelectTemplate: (templateId: string) => void;
+    currentTemplateId: string;
 }
 
 export default function MobileResumEdit({
@@ -46,10 +48,11 @@ export default function MobileResumEdit({
     renderSections,
     handleSave,
     onShowAI,
-    isAiJobRunning
+    isAiJobRunning,
+    onSelectTemplate,
+    currentTemplateId
 }: MobileResumEditProps) {
     const { t } = useTranslation();
-    const [currentTemplateId, setCurrentTemplateId] = React.useState('default-classic');
 
     return <main className="flex h-screen bg-black text-white flex-1">
         <div className='flex-1 flex items-center justify-center bg-black relative'>
@@ -118,7 +121,7 @@ export default function MobileResumEdit({
                         <TemplatePanel
                             rightCollapsed={!rightPanelOpen}
                             setRightCollapsed={(collapsed) => setRightPanelOpen(!collapsed)}
-                            onSelectTemplate={setCurrentTemplateId}
+                            onSelectTemplate={onSelectTemplate}
                             currentTemplateId={currentTemplateId}
                         />
                     </motion.div>
