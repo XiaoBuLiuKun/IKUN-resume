@@ -57,12 +57,12 @@ export const tealProfessionalTemplate: MagicTemplateDSL = {
   layout: {
     type: "two-column",
     containerWidth: "794px",
-    padding: "0",
-    gap: "0",
+    padding: "16px",
+    gap: "12px",
     twoColumn: {
-      leftWidth: "280px",
+      leftWidth: "268px",
       rightWidth: "514px", 
-      gap: "0"
+      gap: "12px"
     }
   },
   
